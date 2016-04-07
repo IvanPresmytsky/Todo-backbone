@@ -1,0 +1,231 @@
+.container {
+  margin: 50px auto;
+}
+
+.todos-container {
+  width: 550px;
+  margin: 0 auto;
+  border: 1px solid grey;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.todos-header {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 2px solid grey;
+}
+
+.todos-header__text-input {
+  width: 465px;
+  font-size: 32px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.todos-header__btn {
+  margin-right: 20px;
+  visibility: hidden;
+}
+
+.todos-header__btn--visible {
+  visibility: visible;
+}
+
+.todos-item-container__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.todos-item-container__todos-item {
+  border-bottom: 1px solid grey;
+}
+
+.todos-item__visible-block{
+  display: block;
+}
+
+.todos-item__visible-block.hidden{
+  display: none;
+}
+
+.todos-item__edit-text {
+  display: none;
+}
+
+.todos-item__edit-text.visible {
+  display: block;
+}
+
+.todos-item__checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  display: none;
+}
+
+.todos-item__checkbox-label {
+  position: relative;
+  top: 0px;
+  left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.todos-item__checkbox:checked + .todos-item__checkbox-label {
+  border: 1px solid green;
+}
+
+.todos-item__checkbox:checked + .todos-item__checkbox-label:before   {
+  content: '\2713';
+  position: absolute;
+  top: -15px;
+  left: 1px;
+  font-size: 28px;
+  color: green; 
+}
+
+.todos-item__text {
+  display: inline-block;
+  vertical-align: middle;
+  
+  padding: 15px 5px;
+  margin-left: 15px;
+  width: 460px;
+  font-size: 20px;
+  word-break: break-word;
+}
+
+.todos-item__text--checked {
+  color: green;
+}
+
+
+.todos-item__edit-text {
+  display: none;
+ 
+  padding: 15px 10px;
+  margin-left: 40px;
+  width: 488px;
+  font-size: 20px;
+  border: none;
+  border: 1px solid green;
+  box-shadow: none;
+}
+
+.todos-item__del-btn {
+  display: inline-block;
+  vertical-align: middle;
+  visibility: hidden;
+  border: none;
+  outline: none;
+  color: red;
+  font-size: 18px;
+  background: none;
+}
+
+.todos-item-container__todos-item:hover .todos-item__del-btn {
+  visibility: visible;
+} 
+
+
+
+.todos-footer {
+  position: relative;
+  padding: 15px;
+  text-align: center;
+}
+
+.todos-footer--visible {
+  display: block;
+}
+
+.todos-footer:before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 5px;
+  width: 540px;
+  height: 5px;
+  border: 1px solid grey;
+  border-top: none;
+}
+
+.todos-footer:after {
+  content: '';
+  position: absolute;
+  bottom: -11px;
+  left: 10px;
+  width: 530px;
+  height: 5px;
+  border: 1px solid grey;
+  border-top: none;
+}
+
+.todos-footer__counter {
+  float: left;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.todos-footer__filters {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.todos-footer__filters li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px; 
+}
+
+.todos-footer__filters a {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.todos-footer__filters a:hover {
+  outline: 1px solid #EFD5D5;
+}
+
+.todos-footer__filters--active {
+  outline: 1px solid red;
+}
+
+.todos-footer__filters a:active {
+  color: red;
+}
+
+.todos-footer__del-btn {
+  float: right;
+  visibility: hidden;
+  padding: 0;
+  margin: 0;
+  color: red;
+
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.todos-footer__del-btn:hover {
+  text-decoration: underline;
+}
+
+.todos-footer__del-btn--visible {
+  visibility: visible;
+}

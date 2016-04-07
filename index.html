@@ -3,11 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>Todo-backbone</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-  <script src="js/lib/backbone-min.js"></script>
+
+  <script id="appTemplate" type="text/template">
+    <h1 class="main-title">todos</h1>
+  </script>
+
+  <script id="todosHeaderTemplate" type="text/template">
+    <div class="todos-header"> 
+      <input class="todos-header__btn check-all-btn" type="checkbox"/>
+      <input class="todos-header__text-input todos-display" type="text" placeholder="What needs to be done?"/>
+     </div>
+  </script>
+
+  <script id="todosListTemplate" type="text/template">
+      <div class="list-item-container"> 
+        <ul class="todos-item-container__list" id="list"> 
+        </ul> 
+      </div>
+  </script>
+
+  <script id="todoTemplate" type="text/template">
+        <div class="todos-item__visible-block {{containerState}}"> 
+          <input class="todos-item__checkbox" id="checkbox-{{id}}" type="checkbox" name="todos-checkbox" {{checked}}/>
+          <label for="checkbox-{{id}}" class="todos-item__checkbox-label"></label> 
+          <label class="todos-item__text">{{content}}</label> 
+          <button class="todos-item__del-btn  del-current-todos-item">X</button> 
+        </div> 
+        <input type="text" class="todos-item__edit-text {{editorState}}" value="{{content}}"/> 
+  </script>
+
+  <script id="todosFooterTemplate" type="text/template">
+      <div class="todos-footer"> 
+        <span class="todos-footer__counter"> 
+          <span id="counter"> 0 </span> 
+          items left 
+          </span> 
+        <ul class="todos-footer__filters"> 
+          <li> 
+            <a href="#" class="todos-filter  todos-all-filter">All</a> 
+          </li> 
+          <li> 
+            <a href="#" class="todos-filter  todos-active-filter">Active</a> 
+          </li> 
+          <li> 
+            <a href="#" class="todos-filter  todos-completed-filter">Completed</a> 
+          </li> 
+        </ul> 
+        <button class="todos-footer__del-btn  del-checked-items-btn">Clear completed</button> 
+      </div>
+  </script>
+
   <script src="js/lib/underscore.js"></script>
   <script src="js/lib/jquery-2.2.2.js"></script>
+  <script src="js/lib/backbone-min.js"></script>
+  <script src="js/models/TodoModel.js"></script>
+  <script src="js/models/TodoList.js"></script>
+  <script src="js/views/AppView.js"></script>
+  <script src="js/views/TodoListView.js"></script>
+  <script src="js/views/TodoView.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
 </html>
